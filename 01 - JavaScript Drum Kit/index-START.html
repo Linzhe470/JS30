@@ -67,6 +67,8 @@
     // 
     // 若想將類陣列轉為陣列: let  變數 = [...類陣列]
     // 使用為展開運算值[... audi]變化
+    // var 受function{}影響 let受{}影響 const不受影響
+    
     let audi1K = document.getElementsByTagName("audio")[1].dataset.key;
     let codeE = [65, 83, 68, 70, 71, 72, 74, 75, 76]
     let shine = document.querySelectorAll(".key")
@@ -79,12 +81,10 @@
       audi[n].play();
     }
 
-
     window.addEventListener("keydown", function (e) {
       let x = e.keyCode;
       let y = codeE.indexOf(x)
       music(y);
-
 
         console.log(x);
         console.log(y);
