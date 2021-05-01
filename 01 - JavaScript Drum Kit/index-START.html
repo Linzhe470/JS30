@@ -79,29 +79,23 @@
       audi[n].play();
     }
 
-    let pod = 0;
 
     window.addEventListener("keydown", function (e) {
       let x = e.keyCode;
       let y = codeE.indexOf(x)
       music(y);
 
-      if (pod == 0) {
 
         console.log(x);
         console.log(y);
         console.log(shine[y]);
-        
         shine[y].classList.add("playing");
-        pod = 1;
-
         var timeoutID = setTimeout(myAlert, 100);
         function myAlert() {
           shine[y].classList.remove("playing");
-          pod = 0;
+ 
         }
 
-      }
 
     })
 
